@@ -1,5 +1,6 @@
 package org.koreait.jpa_exam;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
