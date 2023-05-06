@@ -22,16 +22,22 @@ public class QBoardData extends EntityPathBase<BoardData> {
 
     public static final QBoardData boardData = new QBoardData("boardData");
 
-    public final QBaseEntity _super = new QBaseEntity(this);
+    public final QBaseUserEntity _super = new QBaseUserEntity(this);
 
     public final StringPath boardId = createString("boardId");
 
     public final StringPath content = createString("content");
 
+    //inherited
+    public final NumberPath<Long> createdBy = _super.createdBy;
+
     public final NumberPath<Long> id = createNumber("id", Long.class);
 
     //inherited
     public final DateTimePath<java.time.LocalDateTime> modDt = _super.modDt;
+
+    //inherited
+    public final NumberPath<Long> modifiedBy = _super.modifiedBy;
 
     //inherited
     public final DateTimePath<java.time.LocalDateTime> regDt = _super.regDt;
